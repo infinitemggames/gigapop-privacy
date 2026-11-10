@@ -1,35 +1,10 @@
-// Everything you may want to change lives here: developer name, contact email and the games.
+// Everything you may want to change lives here.
 
-export const DEVELOPER = "Nemanja Maslakovic";
+export const DEVELOPER = "Nemanja Maslaković";
 export const CONTACT_EMAIL = "neca2609@gmail.com";
+// Developer website: lists all games and hosts app-ads.txt for AdMob.
+export const DEVELOPER_SITE = "https://developer-five-iota.vercel.app/";
 
-export type Game = {
-  slug: string; // URL: /<slug>/ and /<slug>/privacy/
-  name: string;
-  tagline: string;
-  description: string;
-  icon: string; // file in public/
-  googlePlay?: string; // store links, added after release
-  appStore?: string;
-  policyDate: string; // effective date of the privacy policy
-};
-
-export const GAMES: Game[] = [
-  {
-    slug: "gigapop",
-    name: "Gigapop",
-    tagline: "Pop every shape at once",
-    description:
-      "A relaxing, oddly satisfying idle arcade game. A ball bounces around the arena on its own and pops every shape it touches. Upgrade it until it is so huge and so fast that it clears the whole arena in one single moment.",
-    icon: "/gigapop/icon.png",
-    googlePlay: undefined,
-    appStore: undefined,
-    policyDate: "November 10, 2026",
-  },
-];
-
-export function game(slug: string): Game {
-  const g = GAMES.find((x) => x.slug === slug);
-  if (!g) throw new Error(`Unknown game: ${slug}`);
-  return g;
-}
+export const GAME = "Gigapop";
+// Effective date of the privacy policy: change it whenever the text changes.
+export const POLICY_DATE = "November 10, 2026";
